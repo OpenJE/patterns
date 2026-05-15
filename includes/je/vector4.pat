@@ -1,0 +1,12 @@
+// Vector4
+
+namespace auto je {
+
+	struct Vector4 {
+		float x;
+		float y;
+		float z;
+		float w;
+	};
+
+}
