@@ -1,5 +1,7 @@
 // GIARc Pattern
 
+#pragma once
+
 namespace auto je {
 
 	struct GIARc {

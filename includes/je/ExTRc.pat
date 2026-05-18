@@ -1,5 +1,7 @@
 // ExTRc Pattern
 
+#pragma once
+
 namespace auto je {
 
 	struct ExTRc {

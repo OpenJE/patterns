@@ -1,4 +1,6 @@
-// *.grp File Format
+// grp — Van Buren Group Archive
+
+#pragma once
 
 namespace auto je {
 
@@ -19,6 +21,7 @@ namespace auto je {
 
 	struct GRP {
 		grp::Header header;
+		grp::Lump   lumps[ header.nFiles ];
 	};
 
 }

@@ -1,11 +1,13 @@
-// EMNPc Pattern
+// EMNPc — Map Navpoint Chunks
+
+#pragma once
 
 import je.vector3;
 
 namespace auto je {
 
 	struct EMNPChunk {
-		u8      bool;
+		u8      @bool;
 		Vector3 l;
 		u8      b1;
 		u8      b2;
@@ -15,7 +17,8 @@ namespace auto je {
 	};
 
 	struct EMNPc {
-		EMNPChunk chunks[];
+		u32       count;
+		EMNPChunk chunks[ count ];
 	};
 
 }

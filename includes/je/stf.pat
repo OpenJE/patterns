@@ -1,25 +1,27 @@
-// *.stf File Format
+// stf — Van Buren String Table
+
+#pragma once
 
 namespace auto je {
 
 	namespace auto stf {
 
 		struct Header {
-			char signature[ 8 ];
-			u32  num_entries;
+			u8  magic[ 8 ];
+			u32 count;
 		};
 
 		struct Entry {
-			char* offset: u32;
-			u32   length;
-			u8    reserved[ 8 ];
+			u32 stringOffset;
+			u32 stringLength;
+			u8  constant[ 8 ];
 		};
 
 	}
 
 	struct Stf {
 		stf::Header header;
-		stf::Entry  entries[ header.num_entries ];
+		stf::Entry  entries[ header.count ];
 	};
 
 }

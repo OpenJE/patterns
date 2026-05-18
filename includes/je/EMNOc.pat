@@ -1,5 +1,7 @@
 // EMNOc Pattern
 
+#pragma once
+
 import je.vector2;
 
 namespace auto je {

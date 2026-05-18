@@ -1,4 +1,6 @@
-// USE Pattern
+// USE — Van Buren Usable Object File
+
+#pragma once
 
 import je.EEN2c;
 import je.GENTc;

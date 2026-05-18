@@ -1,5 +1,7 @@
 // GIWPc Pattern
 
+#pragma once
+
 namespace auto je {
 
 	struct GIWPc {

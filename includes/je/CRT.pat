@@ -1,4 +1,6 @@
-// CRT Pattern
+// CRT — Van Buren Creature/Character File
+
+#pragma once
 
 import je.EEN2c;
 import je.GCHRc;
@@ -9,9 +11,9 @@ namespace auto je {
 
 	struct CRT {
 		EEN2c EEN2;
-		GCHRc GCHR;
-		GCREc GCRE;
 		GENTc GENT;
+		GCREc GCRE;
+		GCHRc GCHR;
 	};
 
 }

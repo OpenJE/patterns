@@ -1,0 +1,18 @@
+// rle — Van Buren RLE Image
+
+#pragma once
+
+namespace auto je {
+
+	struct RLE_Run {
+		s32 count;
+		u8  gray;
+	};
+
+	struct RLE {
+		s32       width;
+		s32       height;
+		RLE_Run   runs[ while( !std::mem::eof() ) ];
+	};
+
+}

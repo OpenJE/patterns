@@ -1,4 +1,6 @@
-// Trigger Pattern
+// trigger — EMTR + ExTR Composite
+
+#pragma once
 
 import je.EMTRc;
 import je.ExTRc;

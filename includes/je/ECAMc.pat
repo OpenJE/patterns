@@ -1,4 +1,6 @@
-// ECAMc Pattern
+// ECAMc — Camera Chunk
+
+#pragma once
 
 import je.vector4;
 

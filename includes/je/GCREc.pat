@@ -1,18 +1,23 @@
-// GCREc Pattern
+// GCREc — Creature Record
+
+#pragma once
 
 import je.GWAMc;
-import je.socket;
 import je.skill;
+import je.socket;
 
 namespace auto je {
 
 	struct GCREc {
-		u8     Special[ 7 ];
-		u8     Age;
-		Skill  Skills[];
-		u8     Traits[];
-		u8     TagSkills[];
-		u8     PortStr_length;
+		u32    Special[ 7 ];
+		u32    Age;
+		u32    Skills_count;
+		Skill  Skills[ Skills_count ];
+		u32    Traits_count;
+		u32    Traits[ Traits_count ];
+		u32    TagSkills_count;
+		u32    TagSkills[ TagSkills_count ];
+		u16    PortStr_length;
 		char   PortStr[ PortStr_length ];
 		Socket Hea;
 		Socket Hai;
@@ -26,8 +31,7 @@ namespace auto je {
 		Socket Bac;
 		Socket Sho;
 		Socket Van;
-		char   Inventory[][];
-		GWAMc  GWAM[];
+		u16    Inventory_count;
 	};
 
 }

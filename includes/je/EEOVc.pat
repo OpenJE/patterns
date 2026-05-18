@@ -1,5 +1,7 @@
 // EEOVc Pattern
 
+#pragma once
+
 import std.array;
 
 using Array<T, auto Size> = std::Array<T, Size>;

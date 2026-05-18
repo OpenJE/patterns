@@ -1,5 +1,7 @@
 // Vector4
 
+#pragma once
+
 namespace auto je {
 
 	struct Vector4 {

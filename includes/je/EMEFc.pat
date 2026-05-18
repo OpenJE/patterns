@@ -1,4 +1,6 @@
-// EMEFc Pattern
+// EMEFc — Map Effect
+
+#pragma once
 
 import je.vector4;
 

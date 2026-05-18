@@ -1,4 +1,6 @@
-// ARM Pattern
+// ARM — Van Buren Armor File
+
+#pragma once
 
 import je.EEN2c;
 import je.GENTc;
@@ -10,8 +12,8 @@ namespace auto je {
 	struct ARM {
 		EEN2c EEN2;
 		GENTc GENT;
-		GIARc GIAR;
 		GITMc GITM;
+		GIARc GIAR;
 	};
 
 }

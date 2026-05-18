@@ -1,4 +1,6 @@
-// Map Pattern
+// Map — Van Buren Map File
+
+#pragma once
 
 import je._2MWTc;
 import je.ECAMc;
@@ -16,18 +18,18 @@ import je.trigger;
 namespace auto je {
 
 	struct Map {
-		_2MWTc  _2MWT = null;
-		ECAMc   ECAM = null;
-		EMAPc   EMAP = new();
+		EMAPc   EMAP;
 		EME2c   EME2[];
-		EMEFc   EMEF[];
 		EMEPc   EMEP[];
-		EMFGc   EMFG = null;
-		EMNOc   EMNO[];
-		EMNPc   EMNP = null;
-		EMSDc   EMSD[];
-		EPTHc   EPTH[];
+		ECAMc   ECAM;
+		_2MWTc  _2MWT;
 		Trigger Triggers[];
+		EPTHc   EPTH[];
+		EMSDc   EMSD[];
+		EMNPc   EMNP;
+		EMFGc   EMFG;
+		EMNOc   EMNO[];
+		EMEFc   EMEF[];
 	};
 
 }

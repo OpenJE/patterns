@@ -1,4 +1,6 @@
-// AMO Pattern
+// AMO — Van Buren Ammo File
+
+#pragma once
 
 import je.EEN2c;
 import je.GENTc;
@@ -10,8 +12,8 @@ namespace auto je {
 	struct AMO {
 		EEN2c EEN2;
 		GENTc GENT;
-		GIAMc GIAM;
 		GITMc GITM;
+		GIAMc GIAM;
 	};
 
 }

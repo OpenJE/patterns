@@ -1,21 +1,26 @@
-// _2MWTc Pattern
+// _2MWTc — Van Buren Water Chunk
 
-import je.vector3;
+#pragma once
+
 import je.vector2;
+import je.vector3;
 
 namespace auto je {
 
 	struct _2MWTChunk {
 		Vector3 p3;
-		char    tex[];
+		u8      tex_length;
+		char    tex[ tex_length ];
 		Vector2 texloc;
 	};
 
 	struct _2MWTc {
-		_2MWTChunk chunks[];
-		bool       dark;
-		bool       frozen;
-		char       mpf[];
+		u8         mpf_length;
+		char       mpf[ mpf_length ];
+		u8         dark;
+		u8         frozen;
+		u32        count;
+		_2MWTChunk chunks[ count ];
 	};
 
 }

@@ -1,5 +1,7 @@
 // GENTc Pattern
 
+#pragma once
+
 namespace auto je {
 
 	struct GENTc {

@@ -1,5 +1,7 @@
 // skill pattern
 
+#pragma once
+
 namespace auto je {
 
 	struct Skill {

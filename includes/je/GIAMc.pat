@@ -1,5 +1,7 @@
 // GIAMc Pattern
 
+#pragma once
+
 namespace auto je {
 
 	struct GIAMc {

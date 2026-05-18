@@ -1,4 +1,6 @@
-// ITM Pattern
+// ITM — Van Buren Item File
+
+#pragma once
 
 import je.EEN2c;
 import je.GENTc;

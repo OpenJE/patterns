@@ -1,4 +1,6 @@
-// WEA Pattern
+// WEA — Van Buren Weapon File
+
+#pragma once
 
 import je.EEN2c;
 import je.GENTc;
