@@ -7,8 +7,8 @@ import je.vector4;
 namespace auto je {
 
 	struct EPTH_Point {
-		Vector4 p;
-		u8      _pad[ 8 ];
+		Vector4<float> p;
+		padding[ 8 ];
 	};
 
 	struct EPTHc {

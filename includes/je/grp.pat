@@ -2,9 +2,13 @@
 
 #pragma once
 
+import std.core;
+import je.rht;
+import je.EMAPc;
+
 namespace auto je {
 
-	namespace auto grp {
+	namespace grp {
 
 		struct Header {
 			u32 vMajor;

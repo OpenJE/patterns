@@ -29,12 +29,12 @@ namespace auto je {
 
 	struct GITMc {
     u8     type;
-    u8     _pad0[ 7 ];
+    padding[ 7 ];
     u8     equip;
-    u8     _pad1[ 3 ];
+    padding[ 3 ];
     if (equip == 1) {
         u8     eqslot;
-        u8     _pad2[ 3 ];
+        padding[ 3 ];
     }
     Socket Hea;
 		u8     hHai;
@@ -43,33 +43,30 @@ namespace auto je {
 		u8     hEye;
 		u8     hPon;
 		u8     hVan;
-		u8     _pad3[ 3 ];
+		padding[ 3 ];
 		u8     sentinel0;
-		u8     _pad4[ 4 ];
+		padding[ 4 ];
 		u8     sentinel1;
-		u8     _pad5[ 4 ];
+		padding[ 4 ];
 		u8     sentinel2;
-		u8     _pad6[ 0 ];
 		Socket Eye;
-		u8     _pad7[ 3 ];
+		padding[ 3 ];
 		u8     sentinel3;
-		u8     _pad8[ 4 ];
+		padding[ 4 ];
 		u8     sentinel4;
-		u8     _pad9[ 0 ];
 		Socket Bod;
 		Socket Bac;
 		Socket Han;
-		u8     _pad10[ 4 ];
+		padding[ 4 ];
 		Socket Fee;
-		u8     _pad11[ 3 ];
+		padding[ 3 ];
 		Socket Sho;
-		u8     _pad12[ 3 ];
+		padding[ 3 ];
 		Socket Van;
-		u8     _pad13[ 3 ];
+		padding[ 3 ];
 		u8     sentinel5;
-		u8     _pad14[ 0 ];
 		Socket IHS;
-		u8     _pad15[ 3 ];
+		padding[ 3 ];
 		u32    reload;
 	};
 

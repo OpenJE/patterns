@@ -8,10 +8,10 @@ import je.vector3;
 namespace auto je {
 
 	struct _2MWTChunk {
-		Vector3 p3;
-		u8      tex_length;
-		char    tex[ tex_length ];
-		Vector2 texloc;
+		Vector3<float> p3;
+		u8             tex_length;
+		char           tex[ tex_length ];
+		Vector2<float> texloc;
 	};
 
 	struct _2MWTc {

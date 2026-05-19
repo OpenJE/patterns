@@ -4,10 +4,11 @@
 
 namespace auto je {
 
-	struct Vector3 {
-		float x;
-		float y;
-		float z;
+	struct Vector3<T> {
+		T x, y, z;
 	};
+
+	using Vector3f = Vector3<float>;
+	using Vector3d = Vector3<double>;
 
 }

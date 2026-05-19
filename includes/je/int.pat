@@ -2,22 +2,17 @@
 
 #pragma once
 
-u8 revision @ 0x07;
+import std.string;
+import je.vector2;
+
+using SizedString = std::string::SizedString<u32>;
 
 namespace auto je {
 
-	namespace int_ns {
-
-		struct PString {
-			s32  len;
-			char val[ len ];
-		};
+	namespace int {
 
 		struct Rect {
-			s32 x1;
-			s32 y1;
-			s32 x2;
-			s32 y2;
+			je::Vector2<s32> p1, p2;
 		};
 
 		struct Fragment {
@@ -27,7 +22,7 @@ namespace auto je {
 			s32  i_40;
 			s32  i_44;
 			s32  i_48;
-			PString texture;
+			SizedString texture;
 			u32  vtxTint;
 			u32  tint;
 			Rect rect;
@@ -35,7 +30,7 @@ namespace auto je {
 
 		struct LabelBlock {
 			s32  stringRef;
-			PString font;
+			SizedString font;
 			s32  padInt;
 			s32  fontSize;
 			s32  flag;
@@ -52,7 +47,7 @@ namespace auto je {
 
 		struct StringListEntry {
 			s32  slot;
-			PString value;
+			SizedString value;
 		};
 
 		struct Object {
@@ -61,18 +56,18 @@ namespace auto je {
 			if (magic == 1) {
 				if (revision >= '3') {
 					u8  buttonPrefix[ 5 ];
-					PString soundDown;
-					PString soundUp;
-					PString soundHover;
+					SizedString soundDown;
+					SizedString soundUp;
+					SizedString soundHover;
 				} else {
 					s32 buttonRev12Int;
 				}
 			}
 
 			Rect rect1;
-			PString name;
+			SizedString name;
 			u8   postName3[ 3 ];
-			PString ini;
+			SizedString ini;
 			u32  colorTint;
 			Rect rect2;
 
@@ -82,11 +77,11 @@ namespace auto je {
 			}
 
 			if (revision >= '2') {
-				PString v3Str1;
+				SizedString v3Str1;
 				s32  v3Int1;
-				PString v3Str2;
+				SizedString v3Str2;
 				s32  v3Int2;
-				PString v3Str3;
+				SizedString v3Str3;
 			}
 
 			Fragment fragments[ 9 ];
@@ -111,7 +106,7 @@ namespace auto je {
 		char     name[ nameLength ];
 		u8       headerPad;
 		s32      numObjects;
-		int_ns::Object objects[ numObjects ];
+		int::Object objects[ numObjects ];
 	};
 
 }
