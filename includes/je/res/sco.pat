@@ -5,7 +5,7 @@
 
 #pragma once
 
-namespace auto je {
+namespace auto je::resource {
 
 	struct SCO {
 		char text[ std::mem::size() ];

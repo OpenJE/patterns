@@ -2,14 +2,14 @@
 
 #pragma once
 
-import je.EMTRc;
-import je.ExTRc;
+import je.chunk.emtr;
+import je.chunk.extr;
 
 namespace auto je::comp {
 
 	struct Trigger {
-		EMTRc EMTR;
-		ExTRc ExTR;
+		EMTR EMTR;
+		ExTR ExTR;
 	};
 
 }

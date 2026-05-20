@@ -1,19 +1,17 @@
-// EME2 — Map Entity Placement
-
+// EME2c Pattern — Map Entity Placement
 #pragma once
-
-import je.EEOV;
-import je.vector4;
+import std.string;
+using SizedString = std::string::SizedString<u16>;
+import je.chunk.eeov;
+import je.comp.vector4;
 
 namespace auto je::chunk {
 
 	struct EME2 : je::comp::Chunk<"EME2"> {
-		u8             name_length;
-		u8             name_pad;
-		char           name[ name_length ];
-		Vector4<float> l;
-		u8             PostLGap[];
-		EEOV           EEOV;
+		SizedString name;
+		Vector4Area24 l;    // 24-byte Vector4 area
+		u8 constant_1;      // always 1, per reference
+		EEOV EEOV;          // embedded EEOV chunk
 	};
 
 }

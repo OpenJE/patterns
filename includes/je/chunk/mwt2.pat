@@ -1,25 +1,27 @@
-// _2MWTc — Van Buren Water Chunk
-
+// _2MWTc Pattern — Van Buren Water Chunk
 #pragma once
+import std.string;
+import std.mem;
 
-import je.vector2;
-import je.vector3;
+using SizedString = std::string::SizedString<u16>;
 
 namespace auto je::chunk {
 
 	struct MWT2Chunk {
-		Vector3f32                    p3;
-		std::string::SizedString<u16> tex;
-		Vector2f32                    texloc;
+		Vector3f32 loc;                          // Vector3 position (12 bytes)
+		SizedString tex;                         // texture name
+		Vector2f32 texloc;                       // UV coordinates (8 bytes)
 	};
 
 	struct MWT2 : je::comp::Chunk<"2MWT"> {
-		u8         mpf_length;
-		char       mpf[ mpf_length ];
-		u8         dark;
-		u8         frozen;
-		u32        count;
-		_2MWTChunk chunks[ count ];
+		SizedString mpf;                          // map file reference
+		std::mem::Bytes<13> unknown_14_26;        // gap after mpf string
+		u8 not_dark;                              // inverse dark flag (bool)
+		u8 unknown_28;                            // unknown byte
+		u8 not_frozen;                            // inverse frozen flag (bool)
+		std::mem::Bytes<124> unknown_30_153;      // large gap before count
+		s32 chunk_count;                          // number of water chunks
+		MWT2Chunk chunks[chunk_count];            // repeated MWT2Chunk records
 	};
 
 }

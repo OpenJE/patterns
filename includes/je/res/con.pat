@@ -1,21 +1,15 @@
 // CON — Van Buren Container File
-
 #pragma once
+import je.chunk.een2;
+import je.chunk.gent;
+import je.chunk.gobj;
+import std.mem;
 
-import je.EEN2c;
-import je.GENTc;
-import je.GOBJc;
-
-namespace auto je {
-
+namespace auto je::resource {
 	struct CON {
-		EEN2c EEN2;
-		GENTc GENT;
-		GOBJc GOBJ;
-		char  GCON_tag[ 4 ];
-		u32   GCON_version;
-		u32   GCON_size;
-		u8    GCON_payload[ 15 ];
+		EEN2 een2;
+		GENT gent;
+		GOBJ gobj;
+		std::mem::Bytes<15> gcon_payload;  // GCON static zeros (tag+ver+size already in GOBJ)
 	};
-
 }

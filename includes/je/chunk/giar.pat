@@ -1,16 +1,17 @@
-// GIARc Pattern
-
+// GIARc Pattern — Armor Resistances
 #pragma once
+import std.mem;
 
 namespace auto je::chunk {
 
 	struct GIAR : je::comp::Chunk<"GIAR"> {
-		u32 BallR;
-		u32 BioR;
-		u32 ElecR;
-		u32 EMPR;
-		u32 NormR;
-		u32 HeatR;
+		s32 BallR;   // ballistic resistance
+		s32 BioR;    // biological resistance
+		s32 ElecR;   // electrical resistance
+		s32 EMPR;    // electromagnetic pulse resistance
+		s32 NormR;   // normal/kinetic resistance
+		s32 HeatR;   // heat/fire resistance
+		std::mem::Bytes<4> unknown_36_39;  // reserved gap at end
 	};
 
 }

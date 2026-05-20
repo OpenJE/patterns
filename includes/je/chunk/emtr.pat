@@ -1,15 +1,12 @@
-// EMTRc — Trigger Geometry
-
+// EMTRc Pattern — Trigger Geometry
 #pragma once
-
-import je.vector3;
+import std.mem;
 
 namespace auto je::chunk {
-
 	struct EMTR : je::comp::Chunk<"EMTR"> {
-		u32            n;
-		u32            count;
-		Vector3<float> r[ count ];
+		s32 n;
+		std::mem::Bytes<4> unknown_16_19;  // gap between n and r_count (if needed)
+		s32 r_count;
+		Vector3f32 r[r_count];
 	};
-
 }

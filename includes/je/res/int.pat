@@ -3,16 +3,16 @@
 #pragma once
 
 import std.string;
-import je.vector2;
+import je.comp.vector2;
 
 using SizedString = std::string::SizedString<u32>;
 
-namespace auto je {
+namespace auto je::resource {
 
 	namespace int {
 
 		struct Rect {
-			je::Vector2<s32> p1, p2;
+			Vector2<s32> p1, p2;
 		};
 
 		struct Fragment {

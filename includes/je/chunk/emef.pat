@@ -1,18 +1,16 @@
-// EMEFc — Map Effect
-
+// EMEFc Pattern — Map Effect
 #pragma once
-
-import je.vector4;
+import std.string;
+using SizedString = std::string::SizedString<u16>;
 
 namespace auto je::chunk {
 
 	struct EMEF : je::comp::Chunk<"EMEF"> {
-		u8             s1_length;
-		char           s1[ s1_length ];
-		Vector4<float> l;
-		u8             s2_length;
-		char           s2[ s2_length ];
-		u8             b;
+		SizedString s1;
+		Vector4Area24 l;   // 24-byte Vector4 area
+		u8 constant_1;     // always 1
+		SizedString s2;
+		u8 b;              // trailing byte
 	};
 
 }

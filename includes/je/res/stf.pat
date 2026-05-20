@@ -2,7 +2,7 @@
 
 #pragma once
 
-namespace auto je {
+namespace auto je::resource {
 
 	namespace auto stf {
 

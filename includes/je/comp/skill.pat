@@ -5,7 +5,7 @@
 namespace auto je::comp {
 
 	struct Skill {
-		s32 id;
+		s32 index;
 		s32 value;
 	};
 

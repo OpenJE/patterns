@@ -2,7 +2,7 @@
 
 #pragma once
 
-import je.vector4;
+import je.comp.vector4;
 
 namespace auto je::chunk {
 

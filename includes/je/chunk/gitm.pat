@@ -23,7 +23,7 @@
 //   offset 88+...+VanLen: IHS socket
 //   offset 92+...+VanLen+IHSLen: reload
 
-import je.socket;
+import je.comp.socket;
 
 namespace auto je::chunk {
 

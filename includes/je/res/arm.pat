@@ -1,19 +1,10 @@
 // ARM — Van Buren Armor File
-
 #pragma once
+import je.chunk.een2;
+import je.chunk.gent;
+import je.chunk.gitm;
+import je.chunk.giar;
 
-import je.EEN2c;
-import je.GENTc;
-import je.GIARc;
-import je.GITMc;
-
-namespace auto je {
-
-	struct ARM {
-		EEN2c EEN2;
-		GENTc GENT;
-		GITMc GITM;
-		GIARc GIAR;
-	};
-
+namespace auto je::resource {
+	struct ARM { EEN2 een2; GENT gent; GITM gitm; GIAR giar; };
 }

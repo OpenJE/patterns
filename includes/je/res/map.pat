@@ -2,34 +2,34 @@
 
 #pragma once
 
-import je._2MWTc;
-import je.ECAMc;
-import je.EMAPc;
-import je.EME2c;
-import je.EMEFc;
-import je.EMEPc;
-import je.EMFGc;
-import je.EMNOc;
-import je.EMNPc;
-import je.EMSDc;
-import je.EPTHc;
-import je.trigger;
+import je.chunk._2mwt;
+import je.chunk.ecam;
+import je.chunk.emap;
+import je.chunk.eme2;
+import je.chunk.emef;
+import je.chunk.emep;
+import je.chunk.emfg;
+import je.chunk.emno;
+import je.chunk.emnp;
+import je.chunk.emsd;
+import je.chunk.epth;
+import je.comp.trigger;
 
-namespace auto je {
+namespace auto je::resource {
 
 	struct Map {
-		EMAPc   EMAP;
-		EME2c   EME2[];
-		EMEPc   EMEP[];
-		ECAMc   ECAM;
-		_2MWTc  _2MWT;
+		MWT2  _2MWT;
+		EMAP   EMAP;
+		EME2   EME2[];
+		EMEP   EMEP[];
+		ECAM   ECAM;
 		Trigger Triggers[];
-		EPTHc   EPTH[];
-		EMSDc   EMSD[];
-		EMNPc   EMNP;
-		EMFGc   EMFG;
-		EMNOc   EMNO[];
-		EMEFc   EMEF[];
+		EPTH   EPTH[];
+		EMSD   EMSD[];
+		EMNP   EMNP;
+		EMFG   EMFG;
+		EMNO   EMNO[];
+		EMEF   EMEF[];
 	};
 
 }

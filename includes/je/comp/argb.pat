@@ -11,6 +11,6 @@ namespace auto je::comp {
 		a : A;
 	} [[sealed, format, color]];
 
-	using ARBG8 = ARGB;
+	using ARGB8 = ARGB<8, 8, 8, 8>;
 
 }

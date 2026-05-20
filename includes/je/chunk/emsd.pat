@@ -1,20 +1,16 @@
-// EMSDc — Map Sound
-
+// EMSDc Pattern — Map Sound
 #pragma once
-
-import je.vector3;
+import std.string;
+using SizedString = std::string::SizedString<u16>;
 
 namespace auto je::chunk {
 
 	struct EMSD : je::comp::Chunk<"EMSD"> {
-		u8             s1_length;
-		u8             s1_pad;
-		char           s1[ s1_length ];
-		Vector3<float> l;
-		u8             s2_length;
-		u8             s2_pad;
-		char           s2[ s2_length ];
-		u8             trailing[ 2 ];
+		SizedString s1;
+		Vector3f32 l;
+		SizedString s2;
+		u8 constant_1a;  // always 1
+		u8 constant_1b;  // always 1
 	};
 
 }

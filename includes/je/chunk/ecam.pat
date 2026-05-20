@@ -1,16 +1,9 @@
 // ECAM — Camera Chunk
-
 #pragma once
-#pragma endian little
-
-import std.sys;
-
-import je.vector4;
+import std.mem;
 
 namespace auto je::chunk {
-
 	struct ECAM : je::comp::Chunk<"ECAM"> {
-		je::Vector4f32 vector4;
+		Vector4f32 p;  // standard 16-byte Vector4 (ECAM total=28 bytes)
 	};
-
 }

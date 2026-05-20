@@ -2,7 +2,7 @@
 
 #pragma once
 
-namespace auto je {
+namespace auto je::resource {
 
 	struct TRE_ChunkHeader {
 		char tag[ 4 ];

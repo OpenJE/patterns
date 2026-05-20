@@ -5,7 +5,7 @@
 
 #pragma once
 
-namespace auto je {
+namespace auto je::resource {
 
 	struct GSF {
 		char text[ std::mem::size() ];

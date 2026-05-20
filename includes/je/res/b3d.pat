@@ -3,11 +3,11 @@
 #pragma once
 
 import std.string;
-import je.vector3;
+import je.comp.vector3;
 
 using SizedString = std::string::SizedString<u16>;
 
-namespace auto je {
+namespace auto je::resource {
 
 	namespace b3d {
 
@@ -51,8 +51,8 @@ namespace auto je {
 		};
 
 		struct TVertex44 {
-			je::Vector3<float> pos;
-			je::Vector3<float> norm;
+			Vector3<float> pos;
+			Vector3<float> norm;
 			u8    b;
 			u8    g;
 			u8    r;
@@ -63,8 +63,8 @@ namespace auto je {
 		};
 
 		struct TVertex64 {
-			je::Vector3<float> pos;
-			je::Vector3<float> norm;
+			Vector3<float> pos;
+			Vector3<float> norm;
 			float colorR;
 			float colorG;
 			float colorB;
@@ -146,10 +146,10 @@ namespace auto je {
 			u8           Flag;
 
 			if (Flag != 0) {
-				je::Vector3<float> Translation;
+				Vector3<float> Translation;
 			}
 			if (Flag == 3) {
-				je::Vector4<float> Rotation;
+				Vector4<float> Rotation;
 			}
 			if (Flag == 2) {
 				float UnknownFloat;
@@ -161,13 +161,13 @@ namespace auto je {
 			u8           Flags;
 
 			if ((Flags & 1) != 0) {
-				je::Vector3<float> Translation;
+				Vector3<float> Translation;
 			}
 			if ((Flags & 2) != 0) {
-				je::Vector4<float> Rotation;
+				Vector4<float> Rotation;
 			}
 			if ((Flags & 4) != 0) {
-				je::Vector3<float> Scale;
+				Vector3<float> Scale;
 			}
 		};
 

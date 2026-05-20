@@ -1,17 +1,15 @@
-// EMEPc — Map Entry Point
-
+// EMEPc Pattern — Map Entry Point
 #pragma once
-
-import je.vector3;
+import std.mem;
 
 namespace auto je::chunk {
 
 	struct EMEP : je::comp::Chunk<"EMEP"> {
-		u8             index;
-		padding[ 60 ];
-		Vector3<float> p;
-		padding[ 20 ];
-		float          r;
+		s32 index;
+		std::mem::Bytes<57> unknown_16_72;  // gap between index and p
+		Vector3f32 p;                        // Vector3 position
+		std::mem::Bytes<20> unknown_85_104;  // gap after p
+		float r;                             // rotation
 	};
 
 }

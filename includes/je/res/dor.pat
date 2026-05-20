@@ -1,21 +1,15 @@
 // DOR — Van Buren Door File
-
 #pragma once
+import je.chunk.een2;
+import je.chunk.gent;
+import je.chunk.gobj;
+import std.mem;
 
-import je.EEN2c;
-import je.GENTc;
-import je.GOBJc;
-
-namespace auto je {
-
+namespace auto je::resource {
 	struct DOR {
-		EEN2c EEN2;
-		GENTc GENT;
-		GOBJc GOBJ;
-		char  GDOR_tag[ 4 ];
-		u32   GDOR_version;
-		u32   GDOR_size;
-		u8    GDOR_payload[ 12 ];
+		EEN2 een2;
+		GENT gent;
+		GOBJ gobj;
+		std::mem::Bytes<12> gdor_payload;  // GDOR static zeros (tag+ver+size already in GOBJ)
 	};
-
 }
