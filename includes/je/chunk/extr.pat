@@ -23,7 +23,8 @@ namespace auto je::chunk {
 	};
 
 	// ExTR: dispatcher — matches tag to dispatch to correct variant
-	struct ExTR : je::comp::Chunk<"ExTR"> {
+	struct ExTR {
+		u32 tag = std::mem::read_unsigned($, 4, std::mem::Endian::Little);
 		match (tag) {
 			("EBTR"): EBTR ebtr;
 			("ESTR"): ESTR estr;
