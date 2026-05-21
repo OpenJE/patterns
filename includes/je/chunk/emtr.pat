@@ -1,5 +1,7 @@
 // EMTRc Pattern — Trigger Geometry
 #pragma once
+#pragma endian little
+
 import je.comp.vector3;
 import std.mem;
 

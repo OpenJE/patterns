@@ -1,6 +1,7 @@
 // tre — Van Buren Octree Map Geometry
 
 #pragma once
+#pragma endian little
 
 namespace auto je::resource {
 

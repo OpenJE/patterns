@@ -1,6 +1,8 @@
 // EMFGc Pattern — Fog Volume
 
 #pragma once
+#pragma endian little
+
 import std.mem;
 
 using Bytes24 = std::mem::Bytes<24>;

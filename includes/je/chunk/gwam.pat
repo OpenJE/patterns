@@ -1,6 +1,7 @@
 // GWAMc Pattern — Weapon Attack Mode (version-gated)
 
 #pragma once
+#pragma endian little
 
 import std.string;
 using SizedString = std::string::SizedString<u16>;

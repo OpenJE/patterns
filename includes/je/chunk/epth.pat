@@ -1,6 +1,7 @@
 // EPTHc — Path
 
 #pragma once
+#pragma endian little
 
 import je.comp.vector4;
 

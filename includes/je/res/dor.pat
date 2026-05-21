@@ -1,5 +1,7 @@
 // DOR — Van Buren Door File
 #pragma once
+#pragma endian little
+
 import je.chunk.een2;
 import je.chunk.gent;
 import je.chunk.gobj;

@@ -1,3 +1,6 @@
+#pragma once
+#pragma endian little
+
 // GITMc — Item Equip/Sockets/Flags
 //
 // Writer layout (common case equip==1):

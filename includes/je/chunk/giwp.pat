@@ -1,5 +1,7 @@
 // GIWPc Pattern — Weapon Data (version-gated)
 #pragma once
+#pragma endian little
+
 import std.string;
 using SizedString = std::string::SizedString<u16>;
 import je.chunk.gwam;

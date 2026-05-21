@@ -1,5 +1,7 @@
 // _2MWTc Pattern — Van Buren Water Chunk
 #pragma once
+#pragma endian little
+
 import je.comp.vector2;
 import je.comp.vector3;
 import std.string;

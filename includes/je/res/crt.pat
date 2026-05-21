@@ -1,5 +1,7 @@
 // CRT — Van Buren Creature/Character File
 #pragma once
+#pragma endian little
+
 import je.chunk.een2;
 import je.chunk.gent;
 import je.chunk.gcre;

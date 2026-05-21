@@ -1,5 +1,7 @@
 // GCREc Pattern — Creature Record
 #pragma once
+#pragma endian little
+
 import std.mem;
 import std.string;
 using SizedString = std::string::SizedString<u16>;

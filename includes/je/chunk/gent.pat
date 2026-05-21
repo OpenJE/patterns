@@ -1,5 +1,7 @@
 // GENTc Pattern — Generic Entity Stats
 #pragma once
+#pragma endian little
+
 import std.mem;
 
 using Bytes8 = std::mem::Bytes<8>;

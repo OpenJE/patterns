@@ -1,5 +1,7 @@
 // GCHRc Pattern — Character Name String
 #pragma once
+#pragma endian little
+
 import std.string;
 using SizedString = std::string::SizedString<u16>;
 

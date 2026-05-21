@@ -1,5 +1,7 @@
 // GIARc Pattern — Armor Resistances
 #pragma once
+#pragma endian little
+
 import std.mem;
 
 using Bytes4 = std::mem::Bytes<4>;
