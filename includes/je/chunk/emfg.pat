@@ -3,6 +3,8 @@
 #pragma once
 import std.mem;
 
+using Bytes24 = std::mem::Bytes<24>;
+
 namespace auto je::chunk {
 
 	struct EMFG : je::comp::Chunk<"EMFG"> {
@@ -16,7 +18,7 @@ namespace auto je::chunk {
 		float anim2Height;
 		float verticalOffset;
 		float max_fog_density;
-		std::mem::Bytes<24> unknown_48_71;  // reserved gap at end
+		Bytes24 unknown_48_71;  // reserved gap at end
 	};
 
 }

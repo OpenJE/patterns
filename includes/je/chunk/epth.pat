@@ -4,12 +4,13 @@
 
 import je.comp.vector4;
 
+using Vector4f32 = Vector4<float>;
 using SizedString = std::string::SizedString<u16>;
 
 namespace auto je::chunk {
 
 	struct EPTH_Point {
-		Vector4<float> p;
+		Vector4f32 p;
 		padding[ 8 ];
 	};
 

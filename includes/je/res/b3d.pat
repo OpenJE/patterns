@@ -4,7 +4,10 @@
 
 import std.string;
 import je.comp.vector3;
+import je.comp.vector4;
 
+using Vector3f32 = Vector3<float>;
+using Vector4f32 = Vector4<float>;
 using SizedString = std::string::SizedString<u16>;
 
 namespace auto je::resource {
@@ -51,8 +54,8 @@ namespace auto je::resource {
 		};
 
 		struct TVertex44 {
-			Vector3<float> pos;
-			Vector3<float> norm;
+			Vector3f32 pos;
+			Vector3f32 norm;
 			u8    b;
 			u8    g;
 			u8    r;
@@ -63,8 +66,8 @@ namespace auto je::resource {
 		};
 
 		struct TVertex64 {
-			Vector3<float> pos;
-			Vector3<float> norm;
+			Vector3f32 pos;
+			Vector3f32 norm;
 			float colorR;
 			float colorG;
 			float colorB;
@@ -146,10 +149,10 @@ namespace auto je::resource {
 			u8           Flag;
 
 			if (Flag != 0) {
-				Vector3<float> Translation;
+				Vector3f32 Translation;
 			}
 			if (Flag == 3) {
-				Vector4<float> Rotation;
+				Vector4f32 Rotation;
 			}
 			if (Flag == 2) {
 				float UnknownFloat;
@@ -161,13 +164,13 @@ namespace auto je::resource {
 			u8           Flags;
 
 			if ((Flags & 1) != 0) {
-				Vector3<float> Translation;
+				Vector3f32 Translation;
 			}
 			if ((Flags & 2) != 0) {
-				Vector4<float> Rotation;
+				Vector4f32 Rotation;
 			}
 			if ((Flags & 4) != 0) {
-				Vector3<float> Scale;
+				Vector3f32 Scale;
 			}
 		};
 

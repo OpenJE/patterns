@@ -2,6 +2,8 @@
 #pragma once
 import std.mem;
 
+using Bytes4 = std::mem::Bytes<4>;
+
 namespace auto je::chunk {
 
 	struct GIAR : je::comp::Chunk<"GIAR"> {
@@ -11,7 +13,7 @@ namespace auto je::chunk {
 		s32 EMPR;    // electromagnetic pulse resistance
 		s32 NormR;   // normal/kinetic resistance
 		s32 HeatR;   // heat/fire resistance
-		std::mem::Bytes<4> unknown_36_39;  // reserved gap at end
+		Bytes4 unknown_36_39;  // reserved gap at end
 	};
 
 }

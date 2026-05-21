@@ -1,21 +1,26 @@
 // EEN2 — Entity Visual/Inventory Strings
 
 #pragma once
+#pragma endian little
 
-import je.chunk.eeov;
 import std.string;
+import std.mem;
+
+import je.comp.chunk;
+import je.chunk.eeov;
+
+using SizedStringu16 = std::string::SizedString<u16>;
+using Bytes8         = std::mem::Bytes<8>;
 
 namespace auto je::chunk {
 
-	using SizedString = std::string::SizedString<u16>;
-
 	struct EEN2 : je::comp::Chunk<"EEN2"> {
-		SizedString skl;
-		SizedString invtex;
-		SizedString acttex;
-		u8      sel;
-		u8      PostSelGap[ 3 ];
-		EEOV    EEOV;
+		SizedStringu16 skl;
+		SizedStringu16 invtex;
+		SizedStringu16 acttex;
+		u8             sel;
+		u8             post_sel_gap[ 3 ];
+		EEOV           eeov;
 	};
 
 }

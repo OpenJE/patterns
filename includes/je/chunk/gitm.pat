@@ -25,13 +25,16 @@
 
 import je.comp.socket;
 
+using Bytes4 = std::mem::Bytes<4>;
+using Bytes3 = std::mem::Bytes<3>;
+
 namespace auto je::chunk {
 
 	struct GITM : je::comp::Chunk<"GITM"> {
 		s32     type;
-		std::mem::Bytes<4> unknown_16_19;  // gap after type (4 bytes)
+		Bytes4 unknown_16_19;  // gap after type (4 bytes)
 		u8      equip;
-		std::mem::Bytes<3> unknown_21_23;  // gap after equip (3 bytes)
+		Bytes3 unknown_21_23;  // gap after equip (3 bytes)
 		s32     eqslot;
 		Socket  Hea;
 		u8      hHai;
@@ -40,15 +43,15 @@ namespace auto je::chunk {
 		u8      hEye;
 		u8      hPon;
 		u8      hVan;
-		std::mem::Bytes<3> unknown_after_h_flags_a;  // gap after h flags (3 bytes)
+		Bytes3 unknown_after_h_flags_a;  // gap after h flags (3 bytes)
 		u8      constant_41;  // sentinel at offset 41 + HeaLen: 0x41
-		std::mem::Bytes<4> unknown_after_h_flags_b;  // gap (4 bytes)
+		Bytes4 unknown_after_h_flags_b;  // gap (4 bytes)
 		u8      constant_46;  // sentinel at offset 46 + HeaLen: 0x41
-		std::mem::Bytes<4> unknown_after_h_flags_c;  // gap (4 bytes)
+		Bytes4 unknown_after_h_flags_c;  // gap (4 bytes)
 		u8      constant_51;  // sentinel at offset 51 + HeaLen: 0x41
 		Socket  Eye;
 		u8      constant_after_eye_a;  // sentinel after Eye: 0x41
-		std::mem::Bytes<4> unknown_after_eye;  // gap (4 bytes)
+		Bytes4 unknown_after_eye;  // gap (4 bytes)
 		u8      constant_after_eye_b;  // sentinel after gap: 0x41
 		Socket  Bod;
 		Socket  Bac;

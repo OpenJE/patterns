@@ -1,5 +1,6 @@
 // EMSDc Pattern — Map Sound
 #pragma once
+import je.comp.vector3;
 import std.string;
 using SizedString = std::string::SizedString<u16>;
 

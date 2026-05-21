@@ -1,6 +1,10 @@
 // ExTRc Pattern — Trigger Action (type-dispatched variant)
 #pragma once
 
+import std.mem;
+
+using Bytes4 = std::mem::Bytes<4>;
+
 namespace auto je::chunk {
 
 	// EBTR: trigger type "B" — fixed 19 bytes
@@ -12,7 +16,7 @@ namespace auto je::chunk {
 	// ESTR: trigger type "S" — variable string, 18+sLen bytes
 	struct ESTR : je::comp::Chunk<"ESTR"> {
 		std::string::SizedString<u16> s;
-		std::mem::Bytes<4> trailing_reserved;
+		Bytes4 trailing_reserved;
 	};
 
 	// ETTR: trigger type "T" — variable string + constants, 16+sLen bytes

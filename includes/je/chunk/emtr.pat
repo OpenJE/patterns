@@ -1,5 +1,6 @@
 // EMTRc Pattern — Trigger Geometry
 #pragma once
+import je.comp.vector3;
 import std.mem;
 
 namespace auto je::chunk {

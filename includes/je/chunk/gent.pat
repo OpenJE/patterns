@@ -2,6 +2,8 @@
 #pragma once
 import std.mem;
 
+using Bytes8 = std::mem::Bytes<8>;
+
 namespace auto je::chunk {
 
 	struct GENT : je::comp::Chunk<"GENT"> {
@@ -9,7 +11,7 @@ namespace auto je::chunk {
 		s32 LookSR;
 		s32 NameSR;
 		s32 UnkwnSR;
-		std::mem::Bytes<8> gap_28_35;  // unknown bytes between UnkwnSR and MaxHealth
+		Bytes8 gap_28_35;  // unknown bytes between UnkwnSR and MaxHealth
 		s32 MaxHealth;
 		s32 StartHealth;
 	};
