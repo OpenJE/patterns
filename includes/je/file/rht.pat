@@ -1,6 +1,7 @@
 // rht — Van Buren Resource Hash Table
 
 #pragma once
+#pragma endian little
 
 namespace je::file::rht {
 

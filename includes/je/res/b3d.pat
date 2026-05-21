@@ -1,23 +1,20 @@
 // b3d — Van Buren 3D Model Format
 
 #pragma once
+#pragma endian little
 
 import std.string;
+
 import je.comp.vector3;
 import je.comp.vector4;
 
-using Vector3f32 = Vector3<float>;
-using Vector4f32 = Vector4<float>;
-using SizedString = std::string::SizedString<u16>;
+using Vector3f32     = Vector3<float>;
+using Vector4f32     = Vector4<float>;
+using SizedStringu16 = std::string::SizedString<u16>;
 
 namespace auto je::resource {
 
 	namespace b3d {
-
-		struct SizedString {
-			s16  length;
-			char data[ length ];
-		};
 
 		struct TColor {
 			float r;
@@ -36,19 +33,19 @@ namespace auto je::resource {
 		};
 
 		struct TMaterials {
-			SizedString Mtl_ID;
-			SizedString Name;
-			TMater       Mater;
-			SizedString BLEND_STATE;
-			SizedString MATERIAL_TYPE;
-			s32          Flag_1;
-			s32          Flag_2;
+			SizedStringu16 Mtl_ID;
+			SizedStringu16 Name;
+			TMater         Mater;
+			SizedStringu16 BLEND_STATE;
+			SizedStringu16 MATERIAL_TYPE;
+			s32            Flag_1;
+			s32            Flag_2;
 		};
 
 		struct TTextures {
 			u8           Unknown1;
-			SizedString Name;
-			SizedString FileName;
+			SizedStringu16 Name;
+			SizedStringu16 FileName;
 			u32          Width;
 			u32          Height;
 		};
@@ -85,9 +82,9 @@ namespace auto je::resource {
 
 		struct G3D_SurfaceMaterial {
 			u32          Unknown3;
-			SizedString Name;
+			SizedStringu16 Name;
 			u32          a1;
-			SizedString Mtl_ID[ a1 ];
+			SizedStringu16 Mtl_ID[ a1 ];
 			u8           PostStringByte;
 			u32          PreKkUint;
 			u32          kk;
@@ -97,11 +94,11 @@ namespace auto je::resource {
 
 		struct G3D_SurfaceMaterial44 {
 			// Material data variant with fixed prefix, then variable-length search loop (1-16 s32, break on ==1)
-			SizedString Name;
-			SizedString Mtl_ID;
+			SizedStringu16 Name;
+			SizedStringu16 Mtl_ID;
 			float        allFloats17[ 17 ];
-			SizedString BLEND_STATE;
-			SizedString MATERIAL_TYPE; // empty in legacy-V35
+			SizedStringu16 BLEND_STATE;
+			SizedStringu16 MATERIAL_TYPE; // empty in legacy-V35
 			s32          postMatTypeInt;
 			// Variable tail: up to 16 s32 search values, then Zone + extras on hit.
 			// Full loop is not linear; inspect raw bytes after postMatTypeInt.
@@ -144,7 +141,7 @@ namespace auto je::resource {
 		};
 
 		struct TBone {
-			SizedString Name;
+			SizedStringu16 Name;
 			u16          Unknown1;
 			u8           Flag;
 
@@ -160,7 +157,7 @@ namespace auto je::resource {
 		};
 
 		struct NodeTransform {
-			SizedString TransformName;
+			SizedStringu16 TransformName;
 			u8           Flags;
 
 			if ((Flags & 1) != 0) {
@@ -201,7 +198,7 @@ namespace auto je::resource {
 					(0x01):        break;
 					(0x03):        float GlobalScaleFactor;
 					(0x04):        float CoordinateScale;
-					(0x05):        SizedString CoordinateSystem;
+					(0x05):        SizedStringu16 CoordinateSystem;
 					(0x06):        {
 						s32 Token06_a;
 						s32 Token06_b;

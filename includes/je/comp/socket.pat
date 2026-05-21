@@ -1,12 +1,15 @@
 // socket pattern
 
 #pragma once
+#pragma endian little
+
+using SizedStringu16 = std::string::SizedString<u16>;
 
 namespace auto je::comp {
 
 	struct Socket {
-		std::string::SizedString<u16> model;
-		std::string::SizedString<u16> tex;
+		SizedStringu16 model;
+		SizedStringu16 tex;
 	};
 
 }

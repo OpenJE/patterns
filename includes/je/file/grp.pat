@@ -1,6 +1,7 @@
 // grp — Van Buren Group Archive
 
 #pragma once
+#pragma endian little
 
 import std.core;
 import je.file.rht;

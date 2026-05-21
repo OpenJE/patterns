@@ -1,4 +1,5 @@
 // ExTRc Pattern — Trigger Action (type-dispatched variant)
+
 #pragma once
 #pragma endian little
 

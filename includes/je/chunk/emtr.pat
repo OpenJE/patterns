@@ -1,9 +1,11 @@
 // EMTRc Pattern — Trigger Geometry
+
 #pragma once
 #pragma endian little
 
-import je.comp.vector3;
 import std.mem;
+
+import je.comp.vector3;
 
 namespace auto je::chunk {
 	struct EMTR : je::comp::Chunk<"EMTR"> {

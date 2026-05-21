@@ -1,4 +1,5 @@
 // GIAMc Pattern — Ammo Stats (version-gated)
+
 #pragma once
 #pragma endian little
 

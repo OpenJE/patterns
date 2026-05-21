@@ -1,6 +1,7 @@
 // ARGB
 
 #pragma once
+#pragma endian little
 
 namespace auto je::comp {
 

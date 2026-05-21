@@ -1,4 +1,5 @@
 // GOBJc Pattern — Object Type
+
 #pragma once
 #pragma endian little
 

@@ -4,7 +4,8 @@
 #pragma endian little
 
 import std.string;
-using SizedString = std::string::SizedString<u16>;
+
+using SizedStringu16 = std::string::SizedString<u16>;
 
 namespace auto je::chunk {
 
@@ -20,14 +21,14 @@ namespace auto je::chunk {
 		s32 f8;
 		s32 min_dmg;
 		s32 max_dmg;
-		u8 bool0;
+		u8  bool0;
 
 		if (header.version != 0) {
 			s32 f12;
-			u8 bool1;
+			u8  bool1;
 			s32 ap;
-			u8 consumed;
-			u8 thrown;
+			u8  consumed;
+			u8  thrown;
 		}
 		if (header.version >= 2) {
 			s32 pose_override;
@@ -36,7 +37,7 @@ namespace auto je::chunk {
 			s32 name_sr;
 		}
 		if (header.version >= 4) {
-			SizedString veg_name;
+			SizedStringu16 veg_name;
 		}
 		if (header.version >= 5) {
 			u8 byte31;

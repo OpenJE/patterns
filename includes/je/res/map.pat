@@ -1,6 +1,7 @@
 // Map — Van Buren Map File
 
 #pragma once
+#pragma endian little
 
 import je.chunk._2mwt;
 import je.chunk.ecam;

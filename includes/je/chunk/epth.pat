@@ -6,7 +6,7 @@
 import je.comp.vector4;
 
 using Vector4f32 = Vector4<float>;
-using SizedString = std::string::SizedString<u16>;
+using SizedStringu16 = std::string::SizedString<u16>;
 
 namespace auto je::chunk {
 
@@ -16,9 +16,9 @@ namespace auto je::chunk {
 	};
 
 	struct EPTH : je::comp::Chunk<"EPTH"> {
-		SizedString name;
-		s32 point_count;
-		EPTH_Point points[point_count];
+		SizedStringu16 name;
+		s32            point_count;
+		EPTH_Point     points[ point_count ];
 	};
 
 }

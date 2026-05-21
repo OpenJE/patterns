@@ -1,4 +1,5 @@
 // AMO — Van Buren Ammo File
+
 #pragma once
 #pragma endian little
 
@@ -8,5 +9,12 @@ import je.chunk.gitm;
 import je.chunk.giam;
 
 namespace auto je::resource {
-	struct AMO { EEN2 een2; GENT gent; GITM gitm; GIAM giam; };
+
+	struct AMO {
+		EEN2 een2;
+		GENT gent;
+		GITM gitm;
+		GIAM giam;
+	};
+
 }

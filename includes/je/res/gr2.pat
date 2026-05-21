@@ -3,6 +3,7 @@
 // Header-only pattern. Full GR2 parsing requires the Granny runtime.
 
 #pragma once
+#pragma endian little
 
 namespace auto je::resource {
 

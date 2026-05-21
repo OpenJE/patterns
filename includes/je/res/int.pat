@@ -1,6 +1,7 @@
 // int — Van Buren GUI Screen Layout
 
 #pragma once
+#pragma endian little
 
 import std.string;
 import je.comp.vector2;

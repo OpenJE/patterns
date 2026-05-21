@@ -1,6 +1,7 @@
 // stf — Van Buren String Table
 
 #pragma once
+#pragma endian little
 
 namespace auto je::resource {
 

@@ -4,6 +4,7 @@
 // No binary structure known; treated as raw text blob.
 
 #pragma once
+#pragma endian little
 
 namespace auto je::resource {
 

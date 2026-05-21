@@ -1,6 +1,7 @@
 // rle — Van Buren RLE Image
 
 #pragma once
+#pragma endian little
 
 namespace auto je::resource {
 
