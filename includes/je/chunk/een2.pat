@@ -3,19 +3,16 @@
 #pragma once
 
 import je.chunk.eeov;
+import std.string;
 
 namespace auto je::chunk {
 
+	using SizedString = std::string::SizedString<u16>;
+
 	struct EEN2 : je::comp::Chunk<"EEN2"> {
-		u8      skl_length;
-		u8      skl_pad;
-		char    skl[ skl_length ];
-		u8      invtex_length;
-		u8      invtex_pad;
-		char    invtex[ invtex_length ];
-		u8      acttex_length;
-		u8      acttex_pad;
-		char    acttex[ acttex_length ];
+		SizedString skl;
+		SizedString invtex;
+		SizedString acttex;
 		u8      sel;
 		u8      PostSelGap[ 3 ];
 		EEOV    EEOV;

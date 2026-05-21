@@ -5,7 +5,7 @@
 import std.string;
 import je.comp.vector2;
 
-using SizedString = std::string::SizedString<u32>;
+using SizedString = std::string::SizedString<s32>;
 
 namespace auto je::resource {
 
@@ -54,7 +54,7 @@ namespace auto je::resource {
 			s32  magic;
 
 			if (magic == 1) {
-				if (revision >= '3') {
+				if (engine_version >= 3) {
 					u8  buttonPrefix[ 5 ];
 					SizedString soundDown;
 					SizedString soundUp;
@@ -71,12 +71,12 @@ namespace auto je::resource {
 			u32  colorTint;
 			Rect rect2;
 
-			if (revision >= '1') {
+			if (engine_version >= 2) {
 				u8   v2Byte;
 				s32  v2Int;
 			}
 
-			if (revision >= '2') {
+			if (engine_version >= 3) {
 				SizedString v3Str1;
 				s32  v3Int1;
 				SizedString v3Str2;
@@ -100,13 +100,13 @@ namespace auto je::resource {
 	}
 
 	struct Int {
-		char     signature[ 7 ];
-		u8       revisionByte;
-		s32      nameLength;
-		char     name[ nameLength ];
-		u8       headerPad;
-		s32      numObjects;
-		int::Object objects[ numObjects ];
-	};
+			char                          signature[ 7 ];              // "GUI V1."
+			u8                            revisionByte;                // revision digit character
+			engine_version = (revisionByte - '0') + 1;                 // computed from revision
+			std::string::SizedString<s32> name;                        // file name string (s32 length prefix)
+			u8                            headerPad;                   // padding byte
+			s32                           numObjects;                  // object count (spec: header_int)
+			int::Object<engine_version>   objects[ numObjects ];       // must use engine_version param
+		};
 
 }

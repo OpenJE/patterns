@@ -8,21 +8,21 @@ namespace auto je::resource {
 	namespace veg {
 
 		struct Property {
-			u16  nameLength;
+			s16  nameLength;
 			char name[ nameLength ];
 
-			u16  typeLength;
+			s16  typeLength;
 			char type[ typeLength ];
 
-			s32  sentinel;
-			u32  payloadSize;
+			u32  sentinel;
+			s32  payloadSize;
 			u8   payload[ payloadSize ];
 		};
 
 		struct VEG_VFX {
 			char     header[ 8 ];
 			u8       unknown[ 8 ];
-			u32      propertyCount;
+			s32      propertyCount;
 			Property properties[ propertyCount ];
 		};
 
@@ -30,12 +30,12 @@ namespace auto je::resource {
 
 	struct Veg {
 		char          signature[ 8 ];
-		u32           vfxCount;
+		s32           vfxCount;
 		u8            unknown[ 12 ];
 
 		veg::VEG_VFX  vfxBlocks[ vfxCount ];
 
-		u32           rootPropertyCount;
+		s32           rootPropertyCount;
 		veg::Property rootProperties[ rootPropertyCount ];
 	};
 

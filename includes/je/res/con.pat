@@ -10,6 +10,7 @@ namespace auto je::resource {
 		EEN2 een2;
 		GENT gent;
 		GOBJ gobj;
-		std::mem::Bytes<15> gcon_payload;  // GCON static zeros (tag+ver+size already in GOBJ)
+		// GCON static zeros. Note: spec says size field = 26 but literal data is 27 bytes (header + 15 zero bytes). Pattern uses Bytes<15> matching actual declared type in vb-pat.md.
+		std::mem::Bytes<15> gcon_payload;
 	};
 }
