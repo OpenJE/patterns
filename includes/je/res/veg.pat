@@ -1,6 +1,8 @@
 // veg — Van Buren Visual Effects File
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine VEG Resource
 #pragma endian little
 
 namespace auto je::resource {
@@ -28,7 +30,7 @@ namespace auto je::resource {
 
 	}
 
-	struct Veg {
+	struct VEG {
 		char          signature[ 8 ];
 		s32           vfxCount;
 		u8            unknown[ 12 ];

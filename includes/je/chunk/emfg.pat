@@ -1,11 +1,13 @@
 // EMFGc Pattern — Fog Volume
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine EMFG Chunk
 #pragma endian little
 
-import std.mem;
+import type.byte;
 
-using Bytes24 = std::mem::Bytes<24>;
+using Byte = type::Byte;
 
 namespace auto je::chunk {
 
@@ -20,7 +22,7 @@ namespace auto je::chunk {
 		float      anim2Height;
 		float      verticalOffset;
 		float      max_fog_density;
-		Bytes24    unknown_48_71;  // reserved gap at end
+		Bytes      [ 24 ];  // reserved gap at end
 	};
 
 }

@@ -1,17 +1,19 @@
 // GOBJc Pattern — Object Type
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine GOBJ Chunk
 #pragma endian little
 
-import std.mem;
+import type.byte;
 
-using Bytes24 = std::mem::Bytes<24>;
+using Byte = type::Byte;
 
 namespace auto je::chunk {
 
 	struct GOBJ : je::comp::Chunk<"GOBJ"> {
-		s32 type;                        // 0=USE, 1=DOR, 2=CON
-		Bytes24 unknown_16_39;  // reserved gap at end (24 bytes)
+		s32   type;                        // 0=USE, 1=DOR, 2=CON
+		Byte  [ 24 ];  // reserved gap at end (24 bytes)
 	};
 
 }

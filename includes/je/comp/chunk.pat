@@ -2,25 +2,43 @@
 // Reference: vb-pat.md (VBHeader), vb-table.md §9
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine Chunk
 #pragma endian little
 
 import std.sys;
 import std.mem;
+import type.size;
+import type.magic;
 
 namespace auto je::comp {
 
-	// Standard 4-byte tag type matching Van Buren binary format
-	using Tag = char[4];
+	namespace chunk {
 
-	// VBHeader — chunk header: tag[4] + version[4] + size[4]
-	struct ChunkHeader {
-		Tag tag;   // "EMAP", "GENT", etc.
-		u32 version;
-		u32 size;      // total bytes including this 12-byte header
+		using Tag<auto Expected> =
+			type::Magic<Expected> [[name( "Tag" ), fixed_size( 4 ), static]];
+
+		struct Header<auto ExpectedTag> {
+			Tag<ExpectedTag> tag;     // "EMAP", "GENT", etc.
+			u32              version;
+			Size32           size;    // total bytes including this 12-byte header
+		} [[static]];
+
+	}
+
+	struct Chunk<auto Tag> {
+		chunk::Header<Tag> header;
 	};
 
-	fn chunk_payload_size(ChunkHeader &h) {
-		return h.size >= 12 ? h.size - 12 : 0;
+	namespace chunk {
+
+		fn payload_size( ref je::comp::Chunk chunk ) {
+			Header header      = chunk.header;
+			Size32 header_size = std::mem::sizeof( header );
+
+			return header.size >= header_size ? header.size - header_size : 0;
+		}
+
 	}
 
 }

@@ -1,6 +1,8 @@
 // AMO — Van Buren Ammo File
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine AMO Resource
 #pragma endian little
 
 import je.chunk.een2;

@@ -1,11 +1,13 @@
 // GWAMc Pattern — Weapon Attack Mode (version-gated)
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine GWAM Chunk
 #pragma endian little
 
 import std.string;
 
-using SizedStringu16 = std::string::SizedString<u16>;
+using String = std::string::SizedString<u16>;
 
 namespace auto je::chunk {
 
@@ -37,7 +39,7 @@ namespace auto je::chunk {
 			s32 name_sr;
 		}
 		if (header.version >= 4) {
-			SizedStringu16 veg_name;
+			String veg_name;
 		}
 		if (header.version >= 5) {
 			u8 byte31;

@@ -1,23 +1,25 @@
 // EMEFc Pattern — Map Effect
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine EMEF Chunk
 #pragma endian little
 
 import std.string;
-import std.mem;
+import type.byte;
 
-using SizedStringu16 = std::string::SizedString<u16>;
-using Bytes8         = std::mem::Bytes<8>;
+using String = std::string::SizedString<u16>;
+using Byte   = type::Byte;
 
 namespace auto je::chunk {
 
 	struct EMEF : je::comp::Chunk<"EMEF"> {
-		SizedStringu16 s1;
-		Vector4f32     l;
-		Bytes8         unknown_tail;
-		u8             constant_1;
-		SizedStringu16 s2;
-		u8             b;
+		String     s1;
+		Vector4f32 l;
+		Byte       [ 8 ];
+		u8         constant_1;
+		String     s2;
+		u8         b;
 	};
 
 }

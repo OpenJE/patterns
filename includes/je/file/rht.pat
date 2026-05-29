@@ -1,6 +1,8 @@
 // rht — Van Buren Resource Hash Table
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine RHT File
 #pragma endian little
 
 namespace je::file::rht {

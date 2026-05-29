@@ -1,6 +1,8 @@
 // GIAMc Pattern — Ammo Stats (version-gated)
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine GIAM Chunk
 #pragma endian little
 
 namespace auto je::chunk {

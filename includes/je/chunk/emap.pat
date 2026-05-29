@@ -1,30 +1,31 @@
 // EMAP Pattern
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine EMAP Chunk
 #pragma endian little
 
 import std.string;
-import std.mem;
+import type.byte;
 
 import je.comp.argb;
 import je.comp.chunk;
 
-using SizedStringu16 = std::string::SizedString<u16>;
-using Bytes4         = std::mem::Bytes<4>;
-using Bytes13        = std::mem::Bytes<13>;
+using String = std::string::SizedString<u16>;
+using Byte   = type::Byte;
 
 namespace auto je::chunk {
 
 	struct EMAP : je::comp::Chunk<"EMAP"> {
-		Bytes4          unknown_12_15;
-		SizedStringu16  s1;
-		SizedStringu16  s2;
-		SizedStringu16  s3;
+		Byte            [ 4 ];
+		String          s1;
+		String          s2;
+		String          s3;
 		u16             _le;
 		je::comp::ARGB8 color;
-		Bytes4          unknown_28_32;
+		Byte            [ 4 ];
 		u32             constant_1;
-		Bytes13         trailing_reserved;
+		Byte            [ 13 ];
 	};
 
 }

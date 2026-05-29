@@ -1,6 +1,8 @@
 // rle — Van Buren RLE Image
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine RLE Resource
 #pragma endian little
 
 namespace auto je::resource {

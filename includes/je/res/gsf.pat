@@ -4,6 +4,8 @@
 // No binary structure known; treated as raw text blob.
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine GSF Resource
 #pragma endian little
 
 namespace auto je::resource {

@@ -1,6 +1,8 @@
 // tre — Van Buren Octree Map Geometry
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine TRE Resource
 #pragma endian little
 
 namespace auto je::resource {
@@ -122,7 +124,7 @@ namespace auto je::resource {
         }
     };
 
-    struct Tre {
+    struct TRE {
         char signature[ 4 ];
         s32  outerSize;
 

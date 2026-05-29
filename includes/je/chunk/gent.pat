@@ -1,11 +1,13 @@
 // GENTc Pattern — Generic Entity Stats
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine GENT Chunk
 #pragma endian little
 
-import std.mem;
+import type.byte;
 
-using Bytes8 = std::mem::Bytes<8>;
+using Byte = type::Byte;
 
 namespace auto je::chunk {
 
@@ -14,7 +16,7 @@ namespace auto je::chunk {
 		s32    LookSR;
 		s32    NameSR;
 		s32    UnkwnSR;
-		Bytes8 gap_28_35;  // unknown bytes between UnkwnSR and MaxHealth
+		Byte   [ 8 ];  // unknown bytes between UnkwnSR and MaxHealth
 		s32    MaxHealth;
 		s32    StartHealth;
 	};

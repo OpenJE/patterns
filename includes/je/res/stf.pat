@@ -1,6 +1,8 @@
 // stf — Van Buren String Table
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine STF Resource
 #pragma endian little
 
 namespace auto je::resource {
@@ -20,7 +22,7 @@ namespace auto je::resource {
 
 	}
 
-	struct Stf {
+	struct STF {
 		stf::Header header;
 		stf::Entry  entries[ header.count ];
 	};

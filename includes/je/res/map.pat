@@ -1,6 +1,8 @@
 // Map — Van Buren Map File
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine MAP Resource
 #pragma endian little
 
 import je.chunk._2mwt;
@@ -18,7 +20,7 @@ import je.comp.trigger;
 
 namespace auto je::resource {
 
-	struct Map {
+	struct MAP {
 		MWT2  _2MWT;
 		EMAP   EMAP;
 		EME2   EME2[];

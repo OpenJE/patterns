@@ -1,6 +1,8 @@
 // ITM — Van Buren Item File
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine ITM Resource
 #pragma endian little
 
 import je.chunk.een2;

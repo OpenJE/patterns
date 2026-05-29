@@ -3,6 +3,8 @@
 // Header-only pattern. Full GR2 parsing requires the Granny runtime.
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine GR2 Resource
 #pragma endian little
 
 namespace auto je::resource {

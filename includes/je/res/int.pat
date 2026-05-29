@@ -1,6 +1,8 @@
 // int — Van Buren GUI Screen Layout
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine INT Resource
 #pragma endian little
 
 import std.string;

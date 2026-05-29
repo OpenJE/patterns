@@ -1,6 +1,8 @@
 // DOR — Van Buren Door File
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine DOR Resource
 #pragma endian little
 
 import je.chunk.een2;

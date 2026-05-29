@@ -1,40 +1,40 @@
 // EEOV Pattern — Inventory/Overlay Strings
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine EEOV Chunk
 #pragma endian little
 
 import std.string;
-import std.mem;
+import type.byte;
 
 import je.comp.chunk;
 
-using SizedStringu16 = std::string::SizedString<u16>;
-using Bytes2         = std::mem::Bytes<2>;
-using Bytes9         = std::mem::Bytes<9>;
-using Bytes11        = std::mem::Bytes<11>;
+using String = std::string::SizedString<u16>;
+using Byte   = type::Byte;
 
 namespace auto je::chunk {
 
 	struct EEOV : je::comp::Chunk<"EEOV"> {
-		SizedStringu16 s1;
+		String s1;
 
-		Bytes11        gap_a;
-		SizedStringu16 s2;
-		SizedStringu16 s3;
+		Byte   [ 11 ];
+		String s2;
+		String s3;
 
-		Bytes9         gap_b;
-		SizedStringu16 s4;
+		Byte   [ 9 ];
+		String s4;
 
-		u8             ps4;
+		u8     ps4;
 
 		if ( ps4 == 2 ) {
-			Bytes2     optional_ps4_gap;
+			Byte [ 2 ];
 		}
 
-		SizedStringu16 s5;
+		String s5;
 
-		s32            inv_count;
-		SizedStringu16 inventory[inv_count];
+		s32    inv_count;
+		String inventory[ inv_count ];
 	};
 
 }

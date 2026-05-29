@@ -1,31 +1,35 @@
 // ExTRc Pattern — Trigger Action (type-dispatched variant)
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine EBTR Chunk
 #pragma endian little
 
-import std.mem;
+import std.string;
+import type.byte;
 
-using Bytes4 = std::mem::Bytes<4>;
+using String = std::string::SizedString<u16>;
+using Byte   = type::Byte;
 
 namespace auto je::chunk {
 
 	// EBTR: trigger type "B" — fixed 19 bytes
 	struct EBTR : je::comp::Chunk<"EBTR"> {
-		char s[3];           // fixed write area at +12
-		char constant_fff[3]; // "FFF" at +16
+		char s[ 3 ];           // fixed write area at +12
+		char constant_fff[ 3 ]; // "FFF" at +16
 	};
 
 	// ESTR: trigger type "S" — variable string, 18+sLen bytes
 	struct ESTR : je::comp::Chunk<"ESTR"> {
-		std::string::SizedString<u16> s;
-		Bytes4 trailing_reserved;
+		String s;
+		Byte   [ 4 ];
 	};
 
 	// ETTR: trigger type "T" — variable string + constants, 16+sLen bytes
 	struct ETTR : je::comp::Chunk<"ETTR"> {
-		std::string::SizedString<u16> s;
-		u8 constant_1a;
-		u8 constant_1b;
+		String s;
+		u8     constant_1a;
+		u8     constant_1b;
 	};
 
 	// ExTR: dispatcher — matches tag to dispatch to correct variant
@@ -37,6 +41,6 @@ namespace auto je::chunk {
 			("ETTR"): ETTR ettr;
 			(_): {}
 		}
-	};
+	} [[inline]];
 
 }

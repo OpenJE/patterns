@@ -1,6 +1,8 @@
 // CON — Van Buren Container File
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine CON Resource
 #pragma endian little
 
 import je.chunk.een2;

@@ -1,6 +1,8 @@
 // ARM — Van Buren Armor File
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine ARM Resource
 #pragma endian little
 
 import je.chunk.een2;

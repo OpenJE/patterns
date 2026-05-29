@@ -1,6 +1,8 @@
 // grp — Van Buren Group Archive
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine GRP File
 #pragma endian little
 
 import std.core;

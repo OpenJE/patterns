@@ -1,6 +1,8 @@
 // USE — Van Buren Usable Object File
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine USE Resource
 #pragma endian little
 
 import je.chunk.een2;

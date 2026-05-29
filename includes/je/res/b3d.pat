@@ -1,6 +1,8 @@
 // b3d — Van Buren 3D Model Format
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine B3D Resource
 #pragma endian little
 
 import std.string;

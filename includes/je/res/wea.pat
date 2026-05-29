@@ -1,6 +1,8 @@
 // WEA — Van Buren Weapon File
 
 #pragma once
+#pragma auther OpenJE
+#pragma description Jefferson Engine WEA Resource
 #pragma endian little
 
 import je.chunk.een2;
